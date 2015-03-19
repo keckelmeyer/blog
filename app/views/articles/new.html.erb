@@ -1,42 +1,5 @@
-<h1>New Article</h1>
-<%= form_for :article, url: articles_path do |f| %>
-<!--When you call form_for, you pass it an identifying
-    object for this form. In this case, it's the symbol
-    :article. This tells the form_for helper what this
-    form is for. Inside the block for this method, the
-    FormBuilder object - represented by f - is used to
-    build two labels and two text fields, one each for
-    the title and text of an article. Finally, a call
-    to submit on the f object will create a submit
-    button for the form.-->
-<!--The form needs to use a different URL in order to
-    go somewhere else. This can be done quite simply
-    with the :url option of form_for. Typically in
-    Rails, the action that is used for new form
-    submissions like this is called "create", and so
-    the form should be pointed to that action.-->
-<!--In this example, the articles_path helper is
-    passed to the :url option. To see what Rails will
-    do with this, we look back at the output of rake
-    routes:. The articles_path helper tells Rails to
-    point the form to the URI Pattern associated with
-    the articles prefix; and the form will (by default)
-    send a POST request to that route. This is
-    associated with the create action of the current
-    controller, the ArticlesController.-->
+<h1>New article</h1>
+<!-- refactored the form into _form.html.erb partial -->
+<%= render 'form' %>
 
-
-    <p>
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
-    </p>
-
-    <p>
-      <%= f.label :text %><br>
-      <%= f.text_area :text %>
-    </p>
-
-    <p>
-      <%= f.submit %>
-    </p>
-<% end %>
+<%= link_to 'Back', articles_path %>
