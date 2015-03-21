@@ -10,8 +10,7 @@ h1 {
   margin:30px; //outside of the border
 }
 h2 {
-  color: #ffc0cb;
-  text-align: center;
+  color: crimson;
   font-family: Arial;
 }
 
@@ -20,6 +19,8 @@ p {
   font-family: Helvetica;
 }
 
-link{
-  font-family: "Source Code Pro", Monaco, monospace;
+li {
+  text-align: left;
+  font-family: Helvetica;
+  font-style: italic;
 }

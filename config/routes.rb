@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'articles/g'
-
+  get 'welcome/resources'
   get 'welcome/index'
   resources :articles do
     resources :comments
