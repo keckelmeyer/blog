@@ -1,0 +1,15 @@
+<%= form_for @resource do |f| %>
+    <p>
+      <%= f.label :category %><br>
+      <%= f.text_field :category, Category.all, :id, :name, :selected =>@post.category.id %>
+    </p>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :link %><br>
+      <%= f.text_field :link %<br>
+    </p>

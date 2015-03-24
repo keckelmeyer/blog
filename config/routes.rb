@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+
+  get 'categories/index'
+
+
+  get 'resources/new'
+
+  get 'resources/edit'
+
+  get 'resources/index'
+
   get 'articles/g'
   get 'welcome/resources'
   get 'welcome/index'
   resources :articles do
     resources :comments
+  end
+  resources :categories do
+
+  end
+  resources :resources do
+    resources :categories
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
