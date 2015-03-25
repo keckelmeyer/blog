@@ -1,8 +1,7 @@
 <%= form_for @resource do |f| %>
     <p>
       <%= f.label :category %><br>
-      <%= f.text_field :category, Category.all, :id, :name, :selected =>@post.category.id %>
-    </p>
+      <%= f.select(:category, @category_options) %>
 
     <p>
       <%= f.label :title %><br>
@@ -11,5 +10,10 @@
 
     <p>
       <%= f.label :link %><br>
-      <%= f.text_field :link %<br>
+      <%= f.text_field :link %><br>
     </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

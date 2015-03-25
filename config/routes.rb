@@ -3,14 +3,9 @@ Rails.application.routes.draw do
   get 'categories/index'
 
 
-  get 'resources/new'
-
-  get 'resources/edit'
-
   get 'resources/index'
 
   get 'articles/g'
-  get 'welcome/resources'
   get 'welcome/index'
   resources :articles do
     resources :comments
