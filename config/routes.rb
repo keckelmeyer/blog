@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root                  'welcome#index'
-  get 'articles'    =>  'articles#index'
-  get 'resources'   =>  'resources#index'
-  get 'categories'  =>  'categories#index'
+  get 'blogposts'    =>  'articles#index'
+  get 'res'   =>  'resources#index'
+  get 'cats'  =>  'categories#index'
 
   resources :articles do
     resources :comments
