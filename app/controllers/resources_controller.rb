@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
 
-  #http_basic_authenticate_with name: "keckelmeyer", password: "Sigm@666", except: [:index, :show]
+  http_basic_authenticate_with name: "keckelmeyer", password: "Sigm@666", except: [:index, :show]
 #
   def index
     @resources=Resource.all
