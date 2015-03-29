@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bcffc93-c262-4804-a14d-52cd2c6bfe1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/welcome/contact.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/about.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/about.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/fonts.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/fonts.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/index.html" afterPath="$PROJECT_DIR$/app/views/layouts/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/projects.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/projects.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/tutorials.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/tutorials.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blog.iws" />
@@ -780,7 +774,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427596098440</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="some more content">
+      <created>1427643187557</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1427643187557</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -838,7 +838,8 @@
     <MESSAGE value="heroku corrected" />
     <MESSAGE value="user/pass" />
     <MESSAGE value="Big CSS changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Big CSS changes" />
+    <MESSAGE value="some more content" />
+    <option name="LAST_COMMIT_MESSAGE" value="some more content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
