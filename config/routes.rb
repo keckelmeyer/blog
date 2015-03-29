@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get 'blogposts'     =>  'articles#index'
   get 'res'           =>  'resources#index'
   get 'cats'          =>  'categories#index'
+  get 'about'         =>  'welcome#about'
+  get 'contact'       =>  'welcome#contact'
+  get 'projects'      =>  'welcome#projects'
+  get 'tutorials'     =>  'welcome#tutorials'
   #get 'lastarticle'   =>  'articles'
 
   resources :articles do
