@@ -1,15 +1,109 @@
 <!DOCTYPE html>
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : WellFormed 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130731
+
+-->
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Blog</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 </head>
 <body>
+<div id="logo" class="container">
+  <h1><a href="#">Keith<span>Eckelmeyer</span></a></h1>
+  <p>Ruby on Rails Project Portfolio</p>
+</div>
+<div id="menu" class="container">
+  <ul>
+    <li> <!-- class="current_page_item" --> <%= link_to 'HomePage', root_path %><!-- <a href="#" accesskey="1" title="">Homepage</a> --></li>
+    <li><%= link_to 'Tutorials', root_path %>   <!-- <a href="#" accesskey="1" title="">Tutorials</a> --></li>
+    <li><%= link_to 'Projects', root_path %>    <!--<a href="#" accesskey="2" title="">Projects</a>--></li>
+    <li><%= link_to 'About', root_path %>       <!--<a href="#" accesskey="3" title="">About</a>--></li>
+    <li><%= link_to 'Contacts', root_path %>    <!--<a href="#" accesskey="4" title="">Contact</a>--></li>
+    <!-- <li><a href="#" accesskey="5" title="">Contact</a></li> -->
+  </ul>
+</div>
+<div id="banner" class="container">
+  <!-- image_tag "pic01.jpg", size: "1200x500" %> -->
+  <!--
+  <img src="images/pic01.jpg" width="1200" height="500" alt="" /></div>
+-->
+  <div id="three-column" class="container">
+  <div id="tbox1">
+    <h2>Tutorials</h2>
+    <p>Learn more about the tutorials I have completed and the ones I look to complete as part of my ongoing training.</p>
+    <a href="#" class="button">Learn More</a> </div>
+  <div id="tbox2">
+    <h2>Projects</h2>
+    <p>The Rails projects I have done on my own, based on my experience from the tutorials, google, and ruby APi reference. </p>
+    <a href="#" class="button">Learn More</a> </div>
+  <div id="tbox3">
+    <h2></h2>
+    <p></p>
+    <a href="#" class="button"></a> </div>
+</div>
+<div id="page" class="container">
+  <div id="content">
 
-<%= yield %>
+    <%= yield %>
 
-<%= render 'layouts/footer' %>
+  </div>
+  <div id="sidebar">
+    <h2 class="title">Latest Blog Entries</h2>
+    <ul class="style2">
+      <li class="first">
+        <h3><%= link_to Article.order('id DESC').first.title, Article.order('id DESC').first %></h3>
+        <p><%= link_to truncate(Article.order('id DESC').first.text, length: 100, omission: '... (continued)'), Article.order('id DESC').first %></p>
+      </li>
+      <li>
+        <h3><%= link_to Article.order('id DESC').second.title, Article.order('id DESC').second %></h3>
+        <p><%= link_to truncate(Article.order('id DESC').second.text, length: 100, omission: '... (continued)'), Article.order('id DESC').second %></p>
+      </li>
+      <li>
+        <h3><%= link_to Article.order('id DESC').third.title, Article.order('id DESC').third %></h3>
+        <p><%= link_to truncate(Article.order('id DESC').third.text, length: 100, omission: '... (continued)'), Article.order('id DESC').third %></p>
+
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="footer" class="container">
+  <div id="fbox1">
+    <h2 class="title">Praesent mattis</h2>
+    <p>Pellentesque viverra vulputate enim. Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </p>
+    <a href="#" class="button">Learn More</a> </div>
+  <div id="fbox2">
+    <h2 class="title">Praesent condimentum</h2>
+    <ul class="style1">
+      <li class="first"><a href="#">Pellentesque consectetuer gravida blandit.</a></li>
+      <li><a href="#">Lorem consectetuer adipiscing elit.</a></li>
+      <li><a href="#">Maecenas vitae vitae feugiat eleifend.</a></li>
+    </ul>
+    <a href="#" class="button">Learn More</a> </div>
+  <div id="fbox3">
+    <h2 class="title">Social</h2>
+    <ul class="style1">
+      <li class="first"><a href="https://twitter.com/KeithEckelmeyer">Twitter</a></li>
+      <li><a href="https://www.facebook.com/keith.eckelmeyer">Facebook</a></li>
+      <li><a href="https://plus.google.com/+KeithEckelmeyer">Google +</a></li>
+      <li><a href="http://www.linkedin.com/pub/keith-a-eckelmeyer-mba/2a/103/823">LinkedIn</a></li>
+    </ul>
+  </div>
+</div>
+<div id="copyright" class="container">
+  <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
 </body>
 </html>
