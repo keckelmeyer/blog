@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'file_repo/new'
+
+  get 'file_repo/show'
+
+  get 'file_repo/index'
+
+  get 'file_repo/edit'
+
+  get 'file_repo/destroy'
+
   root                    'welcome#index'
   get 'blogposts'     =>  'articles#index'
   get 'res'           =>  'resources#index'
