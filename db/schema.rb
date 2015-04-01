@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322140510) do
+ActiveRecord::Schema.define(version: 20150331021431) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20150322140510) do
   end
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+
+  create_table "file_repos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "filetype"
+    t.boolean  "archive"
+    t.binary   "file"
+    t.date     "uploaddate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "resources", force: :cascade do |t|
     t.string   "category"

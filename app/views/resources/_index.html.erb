@@ -1,0 +1,33 @@
+<div class="title">
+  <h2>Resources <span class="byline">for developers</span></h2>
+</div>
+<p><%= link_to 'New Resource', new_resource_path %></p>
+
+<% @resource_cat.each do |category, resources| %>
+    <p><%= category %></p>
+    <% resources.each do |resource|%>
+        <p>---<%= link_to resource.title, resource.link %> ---
+          <%= link_to 'Edit', edit_resource_path(resource) %> ---
+          <%= link_to 'Destroy', resource_path(resource),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+<% end %>
+
+
+
+
+<table>
+<% @resources.each do |resource| %>
+      <tr>
+
+        <td><%= resource.category %> - </td>
+        <td><%= link_to resource.title, resource.link %> - </td>
+      <!-- convert title to a link -->
+        <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+        <td><%= link_to 'Destroy', resource_path(resource),
+                                 method: :delete,
+                                 data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </table>
+<% end %>

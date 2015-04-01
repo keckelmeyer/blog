@@ -1,10 +1,10 @@
 class ResourcesController < ApplicationController
 
-  http_basic_authenticate_with name: "PSERS", password: "2015", except: [:index, :show]
+  http_basic_authenticate_with name: "PSERS", password: "2015", except: [:_index, :show]
 #
-  def index
-    @resources=Resource.all
-
+  def _index
+    @resources=Resource.order(:category, :title).all
+    @resource_cat = @resources.group_by {|r| r.category}
   end
 
   def create
@@ -18,7 +18,7 @@ class ResourcesController < ApplicationController
 
   def new
     @resource = Resource.new
-    @category_options = Category.all.map{|c| [c.name]}
+    @category_options = Category.order(:name).all.map{|c| [c.name]}
     #@category_options = Category.all.map{|c| [c.name, c.id]}
   end
 

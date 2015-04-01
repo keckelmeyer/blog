@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   root                    'welcome#index'
   get 'blogposts'     =>  'articles#index'
-  get 'res'           =>  'resources#index'
+  get 'res'           =>  'resources#_index'
   get 'cats'          =>  'categories#index'
   get 'about'         =>  'welcome#about'
   get 'contact'       =>  'welcome#contact'

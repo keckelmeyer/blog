@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   http_basic_authenticate_with name: "PSERS", password: "2015", except: [:index, :show]
 
   def index
-    @categories = Category.all
+    @categories = Category.order(:name).all
   end
 
   def new
@@ -20,6 +20,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    #@category = Category.find(params[:id], :order => "name")
     @category = Category.find(params[:id])
   end
 
