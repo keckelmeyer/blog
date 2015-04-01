@@ -4,7 +4,7 @@
 <p><%= link_to 'New Resource', new_resource_path %></p>
 
 <% @resource_cat.each do |category, resources| %>
-    <p><%= category %></p>
+    <%= category %>
     <% resources.each do |resource|%>
          - <%= link_to resource.title, resource.link %> |
         <%= link_to 'Edit', edit_resource_path(resource) %> |
@@ -12,5 +12,6 @@
                       method: :delete,
                       data: { confirm: 'Are you sure?' } %><br>
     <% end %>
+    <br><br>
 <% end %>
 
