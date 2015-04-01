@@ -6,11 +6,11 @@
 <% @resource_cat.each do |category, resources| %>
     <p><%= category %></p>
     <% resources.each do |resource|%>
-        <p>---<%= link_to resource.title, resource.link %> ---
-          <%= link_to 'Edit', edit_resource_path(resource) %> ---
-          <%= link_to 'Destroy', resource_path(resource),
+         - <%= link_to resource.title, resource.link %> |
+        <%= link_to 'Edit', edit_resource_path(resource) %> |
+        <%= link_to 'Destroy', resource_path(resource),
                       method: :delete,
-                      data: { confirm: 'Are you sure?' } %></p>
+                      data: { confirm: 'Are you sure?' } %><br>
     <% end %>
 <% end %>
 
