@@ -73,10 +73,10 @@
       <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9189189" vertical-offset="20" max-vertical-offset="1920">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.7972973" vertical-offset="515" max-vertical-offset="1920">
+              <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
               <folding>
-                <marker date="1427857372896" expanded="true" signature="778:790" placeholder="..." />
+                <marker date="1427857622236" expanded="true" signature="778:790" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -883,7 +883,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427855069411</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ie9 shim">
+      <created>1427857423793</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1427857423793</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -972,7 +978,8 @@
     <MESSAGE value="cleaned up resources" />
     <MESSAGE value="cleaned up resources again" />
     <MESSAGE value="cleaned up resources again3" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up resources again3" />
+    <MESSAGE value="ie9 shim" />
+    <option name="LAST_COMMIT_MESSAGE" value="ie9 shim" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1365,10 +1372,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9189189" vertical-offset="20" max-vertical-offset="1920">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.7972973" vertical-offset="515" max-vertical-offset="1920">
+          <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
           <folding>
-            <marker date="1427857372896" expanded="true" signature="778:790" placeholder="..." />
+            <marker date="1427857622236" expanded="true" signature="778:790" placeholder="..." />
           </folding>
         </state>
       </provider>
