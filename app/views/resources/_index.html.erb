@@ -1,13 +1,13 @@
 <div class="title">
   <h2>Resources <span class="byline">for developers</span></h2>
 </div>
-<p><%= link_to 'New Resource', new_resource_path %></p>
+<p><%= link_to 'New Resource', new_resource_path( :anchor =>"yield") %></p>
 
 <% @resource_cat.each do |category, resources| %>
     <%= category %><br>
     <% resources.each do |resource|%>
          - <%= link_to resource.title, resource.link %> |
-        <%= link_to 'Edit', edit_resource_path(resource) %> |
+        <%= link_to 'Edit', edit_resource_path(resource, :anchor =>"yield") %> |
         <%= link_to 'Destroy', resource_path(resource),
                       method: :delete,
                       data: { confirm: 'Are you sure?' } %><br>

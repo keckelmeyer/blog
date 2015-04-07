@@ -1,7 +1,7 @@
 <div class="title">
   <h2>Ruby on Rails <span class="byline">Projects</span></h2>
 </div>
-<p><%= link_to "Blog", blogposts_path %></p>
-<p><%= link_to "Developer Resources", res_path %></p>
-<p><%= link_to "Categories (For Developer Resources)", cats_path  %></p>
+<p><%= link_to "Blog", blogposts_path( :anchor =>"yield") %></p>
+<p><%= link_to "Developer Resources", res_path( :anchor =>"yield") %></p>
+<p><%= link_to "Categories (For Developer Resources)", cats_path( :anchor =>"yield")  %></p>
 <p>Ferret Kibble Database (future project)</p>

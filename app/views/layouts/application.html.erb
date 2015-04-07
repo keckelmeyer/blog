@@ -32,10 +32,10 @@ Released   : 20130731
 <div id="menu" class="container">
   <ul>
     <li> <!-- class="current_page_item" --> <%= link_to 'HomePage', root_path %><!-- <a href="#" accesskey="1" title="">Homepage</a> --></li>
-    <li><%= link_to 'Tutorials', tutorials_path %>   <!-- <a href="#" accesskey="1" title="">Tutorials</a> --></li>
-    <li><%= link_to 'Projects', projects_path %>    <!--<a href="#" accesskey="2" title="">Projects</a>--></li>
-    <li><%= link_to 'About', about_path %>       <!--<a href="#" accesskey="3" title="">About</a>--></li>
-    <li><%= link_to 'Contact', contact_path %>    <!--<a href="#" accesskey="4" title="">Contact</a>--></li>
+    <li><%= link_to 'Tutorials', tutorials_path( :anchor =>"yield") %>   <!-- <a href="#" accesskey="1" title="">Tutorials</a> --></li>
+    <li><%= link_to 'Projects', projects_path( :anchor =>"yield") %>    <!--<a href="#" accesskey="2" title="">Projects</a>--></li>
+    <li><%= link_to 'About', about_path( :anchor =>"yield") %>       <!--<a href="#" accesskey="3" title="">About</a>--></li>
+    <li><%= link_to 'Contact', contact_path( :anchor =>"yield") %>    <!--<a href="#" accesskey="4" title="">Contact</a>--></li>
     <!-- <li><a href="#" accesskey="5" title="">Contact</a></li> -->
   </ul>
 </div>
@@ -48,12 +48,12 @@ Released   : 20130731
   <div id="tbox1">
     <h2>Tutorials</h2>
     <p>Learn more about the tutorials I have completed and the ones I look to complete as part of my ongoing training.</p>
-    <%= button_to 'Learn More', tutorials_path, :class => "button", :method => :get %>
+    <%= button_to 'Learn More', tutorials_path( :anchor =>"yield"), :class => "button", :method => :get %>
       </div>
   <div id="tbox2">
     <h2>Projects</h2>
     <p>The Rails projects I have done on my own, thanks to the tutorials, google, and the Ruby on Rails API reference. </p>
-    <%= button_to 'Learn More', projects_path, :class => "button", :method => :get %>
+    <%= button_to 'Learn More', projects_path( :anchor =>"yield"), :class => "button", :method => :get %>
     <!-- <a href="#" class="button">Learn More</a>--> </div>
   <div id="tbox3">
     <h2></h2>
@@ -63,7 +63,7 @@ Released   : 20130731
 <div id="page" class="container">
   <div id="content">
 
-    <%= yield %>
+    <a name="yield"></a> <%= yield %>
 
   </div>
   <div id="sidebar">
@@ -87,24 +87,37 @@ Released   : 20130731
 </div>
 <div id="footer" class="container">
   <div id="fbox1">
-    <!--
-    <h2 class="title">Praesent mattis</h2>
-    <p>Pellentesque viverra vulputate enim. Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </p>
-    <a href="#" class="button">Learn More</a>
-     -->
+
+    <div class="alignleft">
+      <script type='text/javascript'>
+          amzn_assoc_ad_type = 'banner';
+          amzn_assoc_tracking_id = 'eckelmeyfamil-20';
+          amzn_assoc_marketplace = 'amazon';
+          amzn_assoc_region = 'US';
+          amzn_assoc_placement = 'assoc_banner_placement_default';
+          amzn_assoc_linkid = 'XXBNSDXOI4TD3NQZ';
+          amzn_assoc_campaigns = 'primemain';
+          amzn_assoc_p = '12';
+          amzn_assoc_banner_type = 'category';
+          amzn_assoc_isresponsive = 'false';
+          amzn_assoc_banner_id = '1N7QZYHSKNC8P06S6QG2';
+          amzn_assoc_width = '300';
+          amzn_assoc_height = '250';
+      </script>
+      <script src='//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1'></script>
     </div>
 
+
+  </div>
+
   <div id="fbox2">
-    <!--
-    <h2 class="title">Praesent condimentum</h2>
-    <ul class="style1">
-      <li class="first"><a href="#">Pellentesque consectetuer gravida blandit.</a></li>
-      <li><a href="#">Lorem consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Maecenas vitae vitae feugiat eleifend.</a></li>
-    </ul>
-    <a href="#" class="button">Learn More</a>
-     -->
-     </div>
+
+    <iframe src="
+//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetAdHtml&ID=OneJS&OneJS=1&banner_type=setandforget&campaigns=holsetforget2&placement=assoc_banner_placement_default&region=US&marketplace=amazon&tracking_id=eckelmeyfamil-20&ad_type=banner&height=250&width=300&linkid=QFBAPSA7SWUTU7KZ&f=ifr
+" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+
+
+  </div>
 
   <div id="fbox3">
     <h2 class="title">Social</h2>

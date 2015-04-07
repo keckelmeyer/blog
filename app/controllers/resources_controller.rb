@@ -2,10 +2,6 @@ class ResourcesController < ApplicationController
 
   http_basic_authenticate_with name: "PSERS", password: "2015", except: [:_index, :show]
 #
-  def _index
-    @resources=Resource.order(:category, :title).all
-    @resource_cat = @resources.group_by {|r| r.category}
-  end
 
   def create
     @resource = Resource.new(resource_params)
@@ -20,6 +16,11 @@ class ResourcesController < ApplicationController
     @resource = Resource.new
     @category_options = Category.order(:name).all.map{|c| [c.name]}
     #@category_options = Category.all.map{|c| [c.name, c.id]}
+  end
+
+  def _index
+    @resources=Resource.order(:category, :title).all
+    @resource_cat = @resources.group_by {|r| r.category}
   end
 
   def edit
@@ -47,8 +48,4 @@ end
 private
 def resource_params
   params.require(:resource).permit(:category, :title, :link)
-end
-
-def shit
-  params.require(:resource)
 end
