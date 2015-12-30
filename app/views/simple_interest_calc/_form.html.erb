@@ -1,0 +1,17 @@
+<%= form_for @simple_interest_calc do |f| %>
+    <p>
+      <%= f.label :principle %><br>
+      <%= f.text_field :principle %>
+    </p>
+    <p>
+      <%= f.label :rate %><br>
+      <%= f.text_field :rate %>
+    </p>
+    <p>
+      <%= f.label :years %><br>
+      <%= f.text_field :years %><br>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

@@ -21,5 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql
+  encoding: utf8
+  database: blog
+  username: deployer
+  password: Sigm@666  
+# <<: *default
+# database: db/production.sqlite3

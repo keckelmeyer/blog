@@ -2,12 +2,10 @@ Rails.application.routes.draw do
 
 
 
-  root                    'welcome#index'
-  get 'attachments/show'
-  get 'attachments/new'
-  get 'attachments/create'
+  resources :users
 
-  get 'attachments'   =>  'attachments#index'
+  root                    'welcome#index'
+
   get 'blogposts'     =>  'articles#index'
   get 'res'           =>  'resources#_index'
   get 'cats'          =>  'categories#index'
@@ -17,9 +15,13 @@ Rails.application.routes.draw do
   get 'tutorials'     =>  'welcome#tutorials'
   #get 'lastarticle'   =>  'articles'
 
+  #get 'calculate'     =>  'simple_interest_calc#calculate'
+
   resources :articles do
     resources :comments
   end
+
+  #resources :simple_interest_calc
 
   resources :categories
 
